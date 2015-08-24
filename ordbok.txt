@@ -1,3 +1,3 @@
-det	Peikande pronomen, tredje person, eintal, inkjekjønn.
-den	Personlig pronomen, tredjepersons entall, hann- og hunnkjønn
+det	<b>det</b> pron. 3. person entall nøytrum, jamfør han, hun, I den og I de <i>huset står som d- stod / hent bildet og vis d- til bestemor / rommet og d-s utstrekning</i>
+den	<b>den</b> 3. person entall femininum og maskulinum, jamfør han, hun, I det og I de <i>finn fram oppskriften og les d- nøye / moralen og d-s voktere / d- som lever, får se</i>
 de	Høflig tiltale. Sjelden i vanlig bruk.
