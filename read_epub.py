@@ -1,5 +1,5 @@
+# -*- coding: utf-8 -*-
 __author__ = 'User'
-
 
 import epub
 import re
@@ -14,7 +14,7 @@ class AllEntities:
         return key
 
 book = epub.open_epub('book.epub')
-first_file_name = book.toc.nav_map.nav_point[5].src
+first_file_name = book.toc.nav_map.nav_point[4].src
 print first_file_name
 
 chapter = book.open(first_file_name)  # Open from zip
@@ -31,6 +31,13 @@ tree = etree.parse(first_file, parser=parser)
 
 lines = list(tree)[1].itertext()
 
+dictionary = {}  # Dictionaries don't support duplicate keys
 for line in lines:
-    striped_line = re.sub('[,.?]', '', line)
+    striped_line = re.sub(u'[,.?!–]', '', line)
     print striped_line
+    words = striped_line.split()
+    for word in words:
+        print word
+        dictionary[word] = ""
+
+print len(dictionary)
