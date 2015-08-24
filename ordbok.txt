@@ -1,0 +1,3 @@
+det	Peikande pronomen, tredje person, eintal, inkjekjønn.
+den	Personlig pronomen, tredjepersons entall, hann- og hunnkjønn
+de	Høflig tiltale. Sjelden i vanlig bruk.
