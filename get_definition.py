@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 __author__ = 'User'
 import urllib2
-from BeautifulSoup import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup, NavigableString
 from random import randint
 from time import sleep
 import re
 
 def strip_tags(html, invalid_tags):
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "html.parser")
     for tag in soup.findAll(True):
         if tag.name in invalid_tags:
             s = ""
@@ -19,7 +19,6 @@ def strip_tags(html, invalid_tags):
     return soup
 
 dictionary = {'En', 'av', 'politimennene', 'grep', 'tak', 'i', 'henne', 'og', 'dyttet'}
-
 
 # TODO: use XSLT rather than simply outputting the text
 for word in dictionary:
@@ -40,6 +39,3 @@ for word in dictionary:
         synonym = last_article.findAll("span", {"class": "utvidet"})[0].text
     synonym = re.sub('^[0-9]', '', synonym)
     print synonym
-
-
-
