@@ -7,7 +7,7 @@ from time import sleep
 import re
 
 def strip_tags(html, invalid_tags):
-    soup = BeautifulSoup(html, "html.parser")
+    soup = BeautifulSoup(html, "lxml")
     for tag in soup.findAll(True):
         if tag.name in invalid_tags:
             s = ""
@@ -26,7 +26,7 @@ for word in dictionary:
     url %= word
     print url
     sleep(randint(1, 7))
-    definition_page = BeautifulSoup(urllib2.urlopen(url).read())
+    definition_page = BeautifulSoup(urllib2.urlopen(url).read(), "lxml")
     articles = definition_page.findAll("div", {"class": "artikkel"})
     last_article_counter = len(articles) - 1
     last_article = articles[last_article_counter]
