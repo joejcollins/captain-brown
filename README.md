@@ -9,3 +9,5 @@ Ordbok for Kindle
 <https://www.reddit.com/r/norsk/comments/592rpw/does_anyone_know_if_theres_a_bokm%C3%A5l_api/>
 
 <https://stackoverflow.com/questions/2770547/how-to-retrieve-wiktionary-word-content>
+
+<https://dumps.wikimedia.org/nowiktionary/latest/>
