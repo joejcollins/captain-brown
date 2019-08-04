@@ -10,7 +10,9 @@ Ordbok for Kindle
 
 <https://stackoverflow.com/questions/2770547/how-to-retrieve-wiktionary-word-content>
 
+<https://dumps.wikimedia.org/nowiktionary/latest/>
 
 Norsk to English from Reddit...
 <https://www.reddit.com/r/norsk/comments/clf4fu/norsk_english_dictionary_for_kindle/evx1pld/?context=3>
 <https://gitlab.com/C0rn3j/NorwegianToEnglishDict>
+
