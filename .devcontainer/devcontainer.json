@@ -1,6 +1,6 @@
 {
-	"name": "LaTeX on colonel-white",
-	"image": "ghcr.io/joejcollins/colonel-white:latest",
+	"name": "LaTeX on captain-brown",
+	"image": "ghcr.io/joejcollins/captain-brown:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
