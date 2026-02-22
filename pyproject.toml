@@ -1,0 +1,63 @@
+[project]
+name = "colonel-white"
+version = "0.0.1"
+description = "LaTeX report writing."
+readme = "README.md"
+requires-python = ">=3.14"
+authors = [{ name = "Joe J Collins", email = "joejcollins@gmail.com" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+]
+
+dependencies = [
+    "debugpy",
+    "ipykernel",
+    "ipympl",
+    "matplotlib",
+    "nbconvert",
+    "numpy",
+    "ruff",
+]
+
+[project.urls]
+repository = "https://github.com/joejcollins/colonel-white"
+
+
+[tool.ruff]
+lint.select = ["F", "E", "W", "C90", "I", "PL", "D"]
+lint.ignore = ["D203", "D213"]
+lint.fixable = ["ALL"]
+line-length = 88
+
+[tool.uv]
+package = true
+
+[[tool.mypy.overrides]]
+module = ["colonel_white.*"]
+follow_untyped_imports = true
+
+[tool.pyright]
+exclude = ["**/__pycache__"]
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "3.14"
+pythonPlatform = "Linux"
+
+[tool.mypy]
+python_version = "3.14"
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pylint.master]
+py-version = "3.14"

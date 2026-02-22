@@ -1,0 +1,25 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "words": [
+        "debugpy",
+        "devcontainers",
+        "dotenv",
+        "earthroverprogram",
+        "isort",
+        "jmuchovej",
+        "joejcollins",
+        "latexmk",
+        "mypy",
+        "pdflatex",
+        "pycache",
+        "pylint",
+        "pyproject",
+        "pyright",
+        "shardulm",
+        "stkb",
+        "toolsai",
+        "venv",
+        "vscodevim"
+    ]
+}

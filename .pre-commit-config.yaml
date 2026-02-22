@@ -1,0 +1,74 @@
+---
+minimum_pre_commit_version: 1.21.0
+fail_fast: false
+default_stages: [pre-commit]
+default_install_hook_types: ["commit-msg", "pre-commit"]
+repos:
+  # commit message in conventional commit style
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.2.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args: [--strict]
+
+  # formatters
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.12.12
+    hooks:
+      # Run the linter.
+      - id: ruff
+        types_or: [python, pyi, jupyter]
+        args: [--fix]
+
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.26.3
+    hooks:
+      - id: yamllint
+        args: ["--strict", "-d", "{rules: {line-length: {max: 180}}}"]
+        #
+
+  # miscellaneous
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-docstring-first
+      - id: debug-statements
+      - id: check-json
+      - id: check-yaml
+      - id: end-of-file-fixer
+        exclude_types: [jupyter]
+      - id: trailing-whitespace
+        exclude_types: [jupyter]
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: detect-private-key
+      - id: mixed-line-ending
+
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.9.0
+    hooks:
+      - id: python-use-type-annotations
+      - id: python-no-log-warn
+      - id: python-check-mock-methods
+      - id: python-check-blanket-noqa
+
+  - repo: local
+    hooks:
+      - id: safety
+        name: safety
+        entry: safety
+        language: system
+        pass_filenames: false
+        args: ["check", "--full-report", "--ignore", "51457"]
+        stages: [pre-push]
+
+  - repo: https://github.com/PyCQA/pydocstyle
+    rev: 6.3.0
+    hooks:
+      - id: pydocstyle
+        args: ["--convention=google", "--add-ignore=D10,D21"]
+        additional_dependencies: ["tomli"]
