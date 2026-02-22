@@ -48,14 +48,14 @@
 }
 
 \pagestyle{plain} % page number only
-\raggedright 
+\raggedright
 \raggedbottom
 
 % --- Title + Subtitle support ---
 \makeatletter
 \newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
 \newcommand{\printsubtitle}{\@ifundefined{@subtitle}{}{%
-  \vspace{0.6em}{\Large\itshape \@subtitle\par}}}
+    \vspace{0.6em}{\Large\itshape \@subtitle\par}}}
 \makeatother
 
 \newcommand{\ShortBookTitlePage}{
